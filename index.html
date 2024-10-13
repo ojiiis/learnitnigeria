@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIN - Learn IT Nigeria</title>
+   <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="LIN - Learn IT Nigeria">
+       <meta name="description" content="Learn programming for free in Nigeria at zero cost. get two weeks introduction free class.">
+          <meta property="og:description" content="Learn programming for free in Nigeria at zero cost. get two weeks introduction free class.">
+      <meta property="og:title" content="LIN - Learn IT Nigeria">
+        <meta property="og:image" content="asset/icons/ms-icon-310x310.png">
+    <link ref="icon" href="asset/icons/favicon-32x32.png">
+</head>
+<body>
+    <div id="lin">
+        <div id="header" class="flex ac">
+            <div id="logo"></div>
+            <div id="name">Learn IT Nigeria</div>
+        </div>
+        <div id="body">
+            <div class="pa20" id="linhome">
+                <h1 id="hinfo">Learn Programming in Nigeria for free with a private tutor!</h1>
+                
+            </div>
+            <div id="courses">
+                <h3>All Available Courses</h3>
+                <div id="course-lister">
+                   <a href="javascript:void(0)" class="course" onclick="showCourse()">
+                       <div class="course-image" style="background-image:url('webdevelopment.png')"></div>
+                           <h4>Web Development</h4>
+                    </a>
+                    
+                    <a href="" class="course">
+                       <div class="course-image" style="background-image:url('python.png')"></div>
+                           <h4>Python</h4>
+                    </a>
+                    
+                    <a href="" class="course">
+                       <div class="course-image" style="background-image:url('webdevelopment.png')"></div>
+                           <h4>Back-end programming</h4>
+                    </a>
+                    <a href="" class="course">
+                       <div class="course-image" style="background-image:url('webdevelopment.png')"></div>
+                           <h4>Web Development</h4>
+                    </a>
+                </div>
+            </div>
+            <div id="contact">
+                <h3>Contact Us</h3>
+                <p id="linbot" class="pa20">I am LIN, fill in the below form to make an enquiry or book a space.</p>
+                <form>
+                     <div class="input-group">
+                         <label>Enter your fullname</label>
+                         <input type="text" name="fullname">
+                     </div>
+                     
+                      <div class="input-group">
+                         <label>Enter your email</label>
+                         <input type="email" name="email">
+                     </div>
+                     <div class="input-group">
+                         <label>Enter your phone number</label>
+                         <input type="tel" name="phone">
+                     </div>
+                     <div class="input-group">
+                         <label>Enter your message</label>
+                       <textarea rows="10" name="message"></textarea>
+                     </div>
+                     <div class="btn-group">
+                         <button class="btn">Send message</button>
+                     </div>
+                </form>
+             </div> 
+             
+               <div id="socials">
+                <h3>Socials</h3>
+                <div id="socialsbox" class="flex sa ac">
+                    <a href=""></a>
+                     <a href=""></a>
+                      <a href="https://x.com/learnictnigeria"></a>
+                       <a href=""></a>
+                </div>
+             </div> 
+            <a href="https://wa.me/2348030914844?text=how+do+i+participate+in+the+learn+programming+for+free+program?" id="whatsapp"></a>
+        </div>
+        <div id="footer" class="flex sa ac">
+            <div id="brand"><a href="#linhome">Lin</a></div>
+              <div id="info"><a href="#courses">Courses</a></div>
+            <div id="contact"><a href="#contact">Contact</a></div>
+            <div id="socials"><a href="#socials">Socials</a></div>
+          
+        </div>
+        <div id="single-course-details">
+            <div id="single-course-image" style="background-image:url('webdevelopment.png')"></div>
+            <h2>Web Development</h2>
+            <div id="details">
+                <p>Some course details here Some course details here Some course details here Some course details here </p>
+                <p>Some course details here Some course details here Some course details here Some course details here</p>
+       <p>Some course details here Some course details here Some course details here Some course details here</p>        
+            </div>
+            <button class="btn" style="width:150px">Apply now</button>
+        
+         <button class="btn" id="close-modal" onclick="hideCourse()">Close modal</button>
+        </div>
+          
+    </div>
+<script src="js.js?i=1"></script>
+<script>
+    typeAni(document.getElementById("name"),800)
+    typeAni(document.getElementById("hinfo"),1100)
+    typeAni(document.getElementById("linbot"),1100)
+</script>
+</body>
+</html>
