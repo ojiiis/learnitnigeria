@@ -28,7 +28,7 @@
             <div id="courses">
                 <h3>All Available Courses</h3>
                 <div id="course-lister">
-                   <a href="javascript:void(0)" class="course" onclick="showCourse()">
+                   <!-- <a href="javascript:void(0)" class="course" onclick="showCourse('x')">
                        <div class="course-image" style="background-image:url('asset/course/webdevelopment.png')"></div>
                            <h4>Web Development</h4>
                     </a>
@@ -53,13 +53,13 @@
                     <a href="" class="course">
                        <div class="course-image" style="background-image:url('asset/course/webdevelopment.png')"></div>
                            <h4>Web Development</h4>
-                    </a>
+                    </a> -->
                 </div>
             </div>
             <div id="contact">
                 <h3>Contact Us</h3>
                 <div id="linbot" class="pa20">I am LIN, fill in the below form to make an enquiry or book a space.</div>
-                <form method="POST">
+                <form method="POST" action="contact-form">
                      <div class="input-group">
                          <label>Enter your fullname</label>
                          <input type="text" name="fullname">
@@ -103,7 +103,7 @@
         </div>
         <div id="single-course-details">
             <div id="modal-content">
-                        <div id="single-course-image" style="background-image:url('asset/course/webdevelopment.png')"></div>
+                        <!-- <div id="single-course-image" style="background-image:url('asset/course/webdevelopment.png')"></div>
                         <h2>Web Development</h2>
                         <div id="details">
                             <p>Some course details here Some course details here Some course details here Some course details here </p>
@@ -114,8 +114,9 @@
                         </div>
                         <a class="btn" style="width:150px" href="apply.html?course=Web Development">Apply now</a>
                         
-                        <button class="btn" id="close-modal" onclick="hideCourse()">Close modal</button>
+                         -->
             </div>
+            <button class="btn" id="close-modal" onclick="hideCourse()">Close modal</button>
         </div>
           
     </div>
@@ -132,7 +133,16 @@
     typeAni(document.getElementById("linbot"), {
             delay: 850,
             cursorColor: 'black'
-        })
+        });
+        
+        var cs = "";
+        courses.forEach((element,i) => {
+         cs += `<a href="javascript:void(0)" class="course" onclick="showCourse(${i})">
+                       <div class="course-image" style="background-image:url(${element.course_image})"></div>
+                           <h4>${element.course_name}</h4>
+                    </a>`;   
+        });
+        document.getElementById('course-lister').innerHTML = cs;
 </script>
 </body>
 </html>

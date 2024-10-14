@@ -126,6 +126,7 @@ z-index: 999999;
     background-size:contain;
     background-repeat: no-repeat;
 }
+
 #whatsapp{
     display:inline-block;
     text-decoration:none;
@@ -227,6 +228,12 @@ z-index: 999999;
     height:auto ;
     overflow-y: scroll;
     margin-bottom: 40px;
+}
+#whattolearn li{
+    padding: 5px;
+}
+#whattolearn {
+    padding-bottom: 20px;
 }
 /*
 top:50%;
