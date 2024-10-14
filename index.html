@@ -10,7 +10,7 @@
           <meta property="og:description" content="Learn programming for free in Nigeria at zero cost. get two weeks introduction free class.">
       <meta property="og:title" content="LIN - Learn IT Nigeria">
         <meta property="og:image" content="asset/icons/ms-icon-310x310.png">
-    <link ref="icon" href="asset/icons/favicon-32x32.png">
+    <link rel="icon" href="asset/icons/favicon-32x32.png">
 </head>
 <body>
     <div id="lin">
@@ -20,7 +20,7 @@
         </div>
         <div id="body">
             <div class="pa20" id="linhome">
-                <h1 id="hinfo">Learn Programming in Nigeria for free with a private tutor!</h1>
+                <h1><b>></b> <span id="hinfo">Learn Programming in Nigeria for free with a private tutor!</span></h1>
                 
             </div>
             <div id="courses">
@@ -92,24 +92,40 @@
           
         </div>
         <div id="single-course-details">
-            <div id="single-course-image" style="background-image:url('webdevelopment.png')"></div>
-            <h2>Web Development</h2>
-            <div id="details">
-                <p>Some course details here Some course details here Some course details here Some course details here </p>
-                <p>Some course details here Some course details here Some course details here Some course details here</p>
-       <p>Some course details here Some course details here Some course details here Some course details here</p>        
+            <div id="modal-content">
+                        <div id="single-course-image" style="background-image:url('webdevelopment.png')"></div>
+                        <h2>Web Development</h2>
+                        <div id="details">
+                            <p>Some course details here Some course details here Some course details here Some course details here </p>
+                            <p>Some course details here Some course details here Some course details here Some course details here</p>
+                            <p>Some course details here Some course details here Some course details here Some course details here</p>
+                            <p>Some course details here Some course details here Some course details here Some course details here</p>
+                            <p>Some course details here Some course details here Some course details here Some course details here</p>
+                        </div>
+                        <a class="btn" style="width:150px" href="apply.html?">Apply now</a>
+                        
+                        <button class="btn" id="close-modal" onclick="hideCourse()">Close modal</button>
             </div>
-            <button class="btn" style="width:150px">Apply now</button>
-        
-         <button class="btn" id="close-modal" onclick="hideCourse()">Close modal</button>
         </div>
           
     </div>
 <script src="js.js?i=1"></script>
 <script>
-    typeAni(document.getElementById("name"),800)
-    typeAni(document.getElementById("hinfo"),1100)
-    typeAni(document.getElementById("linbot"),1100)
+    typeAni(document.getElementById("name"),{
+        delay: 800,
+        cursorColor:'black',
+        wait:5000,
+    })
+    typeAni(document.getElementById("hinfo"), {
+            delay: 800,
+            cursorColor: 'white',
+            wait:5000
+        })
+    typeAni(document.getElementById("linbot"), {
+            delay: 800,
+            cursorColor: 'black',
+            wait: 5000
+        })
 </script>
 </body>
 </html>
