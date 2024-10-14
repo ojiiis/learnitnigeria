@@ -312,7 +312,7 @@ const typeAni = (elem,set ={}) =>{
 
 
     var ch = elem.offsetHeigh;
- function addCursor(elem,set){
+ function addCursor(elem,set,ch = ch){
     let cursor = document.createElement("div");
     cursor.style.display = "inline-block";
     cursor.style.width = "2px";
