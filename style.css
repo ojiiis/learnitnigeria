@@ -304,6 +304,13 @@ top:50%;
     to {
         bottom: 10px;
     }
+          from {
+              opacity: 0;
+          }
+    
+          to {
+              opacity: 1;
+          }
 }
 
 @keyframes toRight {
