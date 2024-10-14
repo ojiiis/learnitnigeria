@@ -6,7 +6,6 @@ return paramValue;
 }
 
 
-
 const female = [
     "Abiola",          // Born in wealth
     "Ayomide",         // My joy has come
@@ -279,11 +278,13 @@ function randnames(){
     var firstName = choose[Math.floor(Math.random() * ((choose.length - 1) - 0 + 1)) + 0]       
     return firstName+" "+ male[Math.floor(Math.random() * ((male.length - 1) - 0 + 1)) + 0];
 }
-const typeAni = (elem,set ={}) =>{
+
+const typeAni = (elem,set ={},ch) =>{
     var content = elem.innerText;
     var start = 0;
     elem.innerHTML = content[start++];
-    addCursor(elem,set);
+    
+    addCursor(elem,set,ch);
     const typing = ()=>{
 
        if(start == content.length){
@@ -293,7 +294,7 @@ const typeAni = (elem,set ={}) =>{
        }
        
        elem.innerText = elem.innerText + content[start++];   
-       addCursor(elem,set);
+       addCursor(elem,set,ch);
     }
     
 
@@ -402,4 +403,3 @@ console.log(res);
 
 //
 };
-
