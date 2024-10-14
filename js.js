@@ -1,3 +1,85 @@
+function get(key){
+const url = window.location.search;
+const params = new URLSearchParams(url);
+const paramValue = params.get(key);
+return paramValue;
+}
+
+
+const female = [
+    "Abiola",          // Born in wealth
+    "Ayomide",         // My joy has come
+    "Bola",            // To be wealthy
+    "Folake",          // To be pampered with wealth
+    "Toluwa",          // To God be the glory
+    "Olamide",         // My wealth has come
+    "Funke",           // To take care of or to pamper
+    "Adaeze",          // Daughter of a king
+    "Chiamaka",        // God is beautiful
+    "Uchechi",         // God's will
+    "Ifeyinwa",       // Nothing is impossible
+    "Ngozi",           // Blessing
+    "Ifeoma",         // Good thing
+    "Chinonso",       // God is near
+    "Amina",           // Trustworthy
+    "Fatima",          // Captivating
+    "Zainab",          // Father's precious jewel
+    "Sadiya",          // Lucky
+    "Maryam",          // Beloved
+    "Halima",          // Gentle or mild
+    "Rukayya",         // A name of a wife of the Prophet Muhammad
+    "Yetunde",         // Mother has returned (after rebirth)
+    "Olufunke",        // God has given me a caring person
+    "Damilola",        // God has given me wealth
+    "Chinwendu",       // God’s spirit is with me
+    "Efe",             // Wealth or prosperity
+    "Nkechi",          // What God has given
+    "Temitope",        // Mine is gratitude
+    "Jumoke",          // One who is pampered
+    "Opeoluwa",        // God's blessing
+    "Fiyinfoluwa",     // Help me to appreciate God
+    "Toyin",           // To be joyful
+    "Temiloluwa"       // My wealth belongs to God
+];
+
+const male = [
+    "Adeola",          // Crown of wealth
+    "Chijioke",        // God gives talent
+    "Emeka",           // Great deeds
+    "Ifeanyi",         // Nothing is impossible with God
+    "Obinna",          // Father's heart
+    "Nnamdi",          // My father is alive
+    "Tunde",           // Returns again
+    "Oluwaseun",       // God has done well
+    "Chukwudi",        // God is alive
+    "Ugochukwu",       // God's glory
+    "Ayodele",         // Joy has come home
+    "Ikenna",          // The power of the father
+    "Oghenekevwe",     // The world knows
+    "Damilare",        // God has redeemed me
+    "Chinonso",        // God is near
+    "Ifechukwu",       // God's light
+    "Kelechi",         // Thank God
+    "Uchechukwu",      // God's will
+    "Obi",             // Heart
+    "Nedum",           // The good one
+    "Onyeka",          // Who is greater than God?
+    "Temitope",        // Mine is gratitude
+    "Okechukwu",       // God's strength
+    "Chima",           // God knows
+    "Chukwuemeka",     // God has done well
+    "Emmanuel",        // God is with us
+    "Tope",            // To God be the glory
+    "Olumide",         // My wealth has come
+    "Ayomide"          // My joy has come
+];
+
+function randnames(){
+    var choose = [female,male];
+    choose = choose[Math.floor(Math.random() * ((1) - 0 + 1)) + 0];
+    var firstName = choose[Math.floor(Math.random() * ((choose.length - 1) - 0 + 1)) + 0]       
+    return firstName+" "+ male[Math.floor(Math.random() * ((male.length - 1) - 0 + 1)) + 0];
+}
 const typeAni = (elem,set ={}) =>{
     var content = elem.innerText;
     var start = 0;
@@ -75,27 +157,6 @@ var appliedList = [
     }
 ];
 
-var cIndex = 0;
-setInterval(function(){
- if(cIndex == appliedList.length){
-cIndex = 0;
- }
- var text = `<div id="applied-img" style="background-image:url(${appliedList[cIndex].pic})"></div>
-         <div id="applied-details">
-            <b>${appliedList[cIndex].name}</b>
-            <div>Just applied for web development course.</div>
-         </div>`;
 
- if(document.getElementById("applied-alert")){
-document.getElementById("applied-alert").style.animation = "toRight 3s;"
-    setTimeout(function(){
-        document.getElementById("applied-alert").remove();
-    },2000);
- }
- let a = document.createElement('div');
-a.id = "applied-alert";
-a.innerHTML = text;
-document.body.appendChild(a);
-a.style.animation = "fromBottom 4s;";
-cIndex++;
-},4000);
+
+

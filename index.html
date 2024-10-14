@@ -15,7 +15,9 @@
 <body>
     <div id="lin">
         <div id="header" class="flex ac">
-            <div id="logo"></div>
+            <a href="./">
+                <div id="logo"></div>
+            </a>
             <div id="name">Learn IT Nigeria</div>
         </div>
         <div id="body">
@@ -27,21 +29,21 @@
                 <h3>All Available Courses</h3>
                 <div id="course-lister">
                    <a href="javascript:void(0)" class="course" onclick="showCourse()">
-                       <div class="course-image" style="background-image:url('webdevelopment.png')"></div>
+                       <div class="course-image" style="background-image:url('asset/course/webdevelopment.png')"></div>
                            <h4>Web Development</h4>
                     </a>
                     
                     <a href="" class="course">
-                       <div class="course-image" style="background-image:url('python.png')"></div>
+                       <div class="course-image" style="background-image:url('asset/course/python.png')"></div>
                            <h4>Python</h4>
                     </a>
                     
                     <a href="" class="course">
-                       <div class="course-image" style="background-image:url('webdevelopment.png')"></div>
-                           <h4>Back-end programming</h4>
+                       <div class="course-image" style="background-image:url('asset/course/java.png')"></div>
+                           <h4>Java</h4>
                     </a>
                     <a href="" class="course">
-                       <div class="course-image" style="background-image:url('webdevelopment.png')"></div>
+                       <div class="course-image" style="background-image:url('asset/course/webdevelopment.png')"></div>
                            <h4>Web Development</h4>
                     </a>
                 </div>
@@ -49,7 +51,7 @@
             <div id="contact">
                 <h3>Contact Us</h3>
                 <p id="linbot" class="pa20">I am LIN, fill in the below form to make an enquiry or book a space.</p>
-                <form>
+                <form method="POST">
                      <div class="input-group">
                          <label>Enter your fullname</label>
                          <input type="text" name="fullname">
@@ -102,7 +104,7 @@
                             <p>Some course details here Some course details here Some course details here Some course details here</p>
                             <p>Some course details here Some course details here Some course details here Some course details here</p>
                         </div>
-                        <a class="btn" style="width:150px" href="apply.html?">Apply now</a>
+                        <a class="btn" style="width:150px" href="apply.html?course=Web Development">Apply now</a>
                         
                         <button class="btn" id="close-modal" onclick="hideCourse()">Close modal</button>
             </div>
@@ -113,18 +115,15 @@
 <script>
     typeAni(document.getElementById("name"),{
         delay: 800,
-        cursorColor:'black',
-        wait:5000,
+        cursorColor:'black'
     })
     typeAni(document.getElementById("hinfo"), {
-            delay: 800,
-            cursorColor: 'white',
-            wait:5000
+            delay: 900,
+            cursorColor: 'white'
         })
     typeAni(document.getElementById("linbot"), {
             delay: 800,
-            cursorColor: 'black',
-            wait: 5000
+            cursorColor: 'black'
         })
 </script>
 </body>

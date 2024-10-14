@@ -19,11 +19,46 @@
 <body>
     <div id="lin">
         <div id="header" class="flex ac">
-            <div id="logo"></div>
+            <a href="./">
+                <div id="logo"></div>
+            </a>
             <div id="name">Learn IT Nigeria</div>
         </div>
         <div id="body">
-           <h1 class="pa20">Apply for Web </h1>
+            <div class="pa20" id="application-form">
+                <h3>Apply for <span id="course"></span></h3>
+                  
+                  <div class="success-msg">Your application has been submited successfully!</div>
+                    <form method="POST">
+                        <div class="input-group">
+                            <label>Enter your fullname</label>
+                            <input type="text" name="fullname">
+                        </div>
+                    
+                        <div class="input-group">
+                            <label>Enter your email</label>
+                            <input type="email" name="email">
+                        </div>
+                        <div class="input-group">
+                            <label>Enter your whatsapp phone number</label>
+                            <input type="tel" name="phone">
+                        </div>
+                        <div class="input-group">
+                            <label>How do you know about this platform</label>
+                            <select name="marketing">
+                                <option value="">Select an option</option>
+                                <option value="friend">From a friend</option>
+                                <option value="google">Google search</option>
+                                <option value="socialmedia">Social Media</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn" type="submit">Apply</button>
+                        </div>
+                    </form>
+            </div>
+           
         </div>
 
       
@@ -35,7 +70,34 @@
             cursorColor: 'black',
             wait: 5000,
         })
-       
+        var course = (get('course')) ? get('course') : 'Learn It Nigeria';
+        document.getElementById("course").innerText = course;
+
+        var cIndex = 0;
+            setInterval(function () {
+                if (cIndex == appliedList.length) {
+                    cIndex = 0;
+                }
+                var course = (get('course')) ? get('course') : 'Learn It Nigeria';
+                var text = `<div id="applied-img" style="background-image:url('asset/image/user.webp')"></div>
+         <div id="applied-details">
+            <b>${randnames()}</b>
+            <div>Just applied for ${course}.</div>
+         </div>`;
+
+                if (document.getElementById("applied-alert")) {
+                    document.getElementById("applied-alert").style.animation = "toRight 1s forwards"
+                    setTimeout(function () {
+                        document.getElementById("applied-alert").remove();
+                    }, 1000)
+                }
+                let a = document.createElement('div');
+                a.id = "applied-alert";
+                a.innerHTML = text;
+                document.body.appendChild(a);
+                a.style.animation = "fromBottom 1s forwards";
+                cIndex++;
+            }, 4000);
     </script>
 </body>
 
