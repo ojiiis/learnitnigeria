@@ -78,7 +78,7 @@ const male = [
 const courses = [
   {
     "course_name": "Web Development",
-    "course_image": "https://www.linkpicture.com/q/web-development.jpg",
+    "course_image": "asset/course/webdevelopment.png",
     "course_description": "Learn how to build modern, responsive websites and web applications using HTML, CSS, JavaScript, and frameworks like React and Vue.",
     "what_to_learn": [
       "HTML & CSS basics",
