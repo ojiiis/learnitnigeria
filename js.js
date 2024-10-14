@@ -374,9 +374,29 @@ var appliedList = [
 
 var forms=document.getElementsByTagName('form');
 for(let i = 0; i < forms.length; i++){
-forms[i].onsubmit = function(event){
+forms[i].onsubmit = async function(event){
 event.preventDefault();
-console.log(this.action)
+this.disabled = true;
+const send = await fetch(this.action,{
+    method:"POST",
+    body: new FormData(this)
+});
+const res = await send.json();
+this.disabled = false;
+document.getElementById('error').scrollIntoView({ behavior: "smooth" });
+if(!res.status){
+    var err = "";
+res.error.forEach((item)=>{
+err += `<div class="error-msg">${item}</div>`;
+});
+document.getElementById('error').innerHTML = err;
+}else{
+   document.getElementById('error').innerHTML = `<div class="success-msg">${res.message}</div>`; 
 }
+
+console.log(res);
+}
+
+//
 };
 

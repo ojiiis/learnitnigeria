@@ -59,7 +59,8 @@
             <div id="contact">
                 <h3>Contact Us</h3>
                 <div id="linbot" class="pa20">I am LIN, fill in the below form to make an enquiry or book a space.</div>
-                <form method="POST" action="contact-form">
+                <div id="error" class="pa20"></div>
+                <form method="POST" action="http://ojlearn.atwebpages.com/index.php">
                      <div class="input-group">
                          <label>Enter your fullname</label>
                          <input type="text" name="fullname">
@@ -77,6 +78,7 @@
                          <label>Enter your message</label>
                        <textarea rows="10" name="message"></textarea>
                      </div>
+                     <input type="hidden" name="contact">
                      <div class="btn-group">
                          <button class="btn">Send message</button>
                      </div>
