@@ -316,7 +316,7 @@ const typeAni = (elem,set ={}) =>{
     let cursor = document.createElement("div");
     cursor.style.display = "inline-block";
     cursor.style.width = "2px";
-    cursor.style.height= (elem.offsetHeight*0.52)+"%";
+    cursor.style.height= (elem.offsetHeight*0.12)+"px";
     cursor.style.background = set.cursorColor;
     cursor.style.lineHeight = "0.01";
     
