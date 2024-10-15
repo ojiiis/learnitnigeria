@@ -88,6 +88,30 @@ const courses = [
       "Backend development (Node.js, Express)"
     ]
   },
+     {
+    "course_name": "Frontend Development",
+    "course_image": "asset/course/front-end.png",
+    "course_description": "Learn to build the visual and interactive parts of websites and web applications using HTML, CSS, JavaScript, and modern frameworks.",
+    "what_to_learn": [
+      "HTML & CSS for webpage structure and styling",
+      "JavaScript programming for interactivity",
+      "Responsive design with Bootstrap or Tailwind CSS",
+      "Frontend frameworks like React, Vue.js, or Angular",
+      "Version control with Git and GitHub"
+    ]
+  },
+    {
+    "course_name": "Backend Development",
+    "course_image": "asset/course/backend.jpg",
+    "course_description": "Master server-side development to create APIs, handle databases, and implement logic for web applications.",
+    "what_to_learn": [
+      "Server-side languages (Node.js, Python, PHP)",
+      "Working with databases (MySQL, MongoDB)",
+      "API development (REST, GraphQL)",
+      "Authentication and authorization",
+      "Cloud deployment and server management"
+    ]
+  },
   {
     "course_name": "Data Science",
     "course_image": "https://www.linkpicture.com/q/data-science.jpg",
@@ -160,33 +184,11 @@ const courses = [
       "Cryptography and consensus mechanisms"
     ]
   },
-  {
-    "course_name": "Frontend Development",
-    "course_image": "https://your-image-hosting-service.com/frontend-development.jpg",
-    "course_description": "Learn to build the visual and interactive parts of websites and web applications using HTML, CSS, JavaScript, and modern frameworks.",
-    "what_to_learn": [
-      "HTML & CSS for webpage structure and styling",
-      "JavaScript programming for interactivity",
-      "Responsive design with Bootstrap or Tailwind CSS",
-      "Frontend frameworks like React, Vue.js, or Angular",
-      "Version control with Git and GitHub"
-    ]
-  },
-  {
-    "course_name": "Backend Development",
-    "course_image": "https://your-image-hosting-service.com/backend-development.jpg",
-    "course_description": "Master server-side development to create APIs, handle databases, and implement logic for web applications.",
-    "what_to_learn": [
-      "Server-side languages (Node.js, Python, PHP)",
-      "Working with databases (MySQL, MongoDB)",
-      "API development (REST, GraphQL)",
-      "Authentication and authorization",
-      "Cloud deployment and server management"
-    ]
-  },
+ 
+  
    {
     "course_name": "Python Programming",
-    "course_image": "https://your-image-hosting-service.com/python-programming.jpg",
+    "course_image": "asset/course/python.png",
     "course_description": "Learn Python, one of the most versatile programming languages, widely used in web development, data science, machine learning, and more.",
     "what_to_learn": [
       "Python syntax and basic programming concepts",
@@ -198,7 +200,7 @@ const courses = [
   },
   {
     "course_name": "Java Programming",
-    "course_image": "https://your-image-hosting-service.com/java-programming.jpg",
+    "course_image": "asset/course/java.png",
     "course_description": "Master Java, a powerful object-oriented programming language used for building large-scale applications, Android apps, and more.",
     "what_to_learn": [
       "Java syntax and object-oriented programming (OOP)",
