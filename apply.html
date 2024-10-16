@@ -74,7 +74,7 @@
         })
         var course = (get('course')) ? get('course') : 'Learn It Nigeria';
         document.getElementById("course").innerText = course;
-
+        document.getElementById("applied_for").value = course;
         var cIndex = 0;
             setInterval(function () {
                 if (cIndex == appliedList.length) {
