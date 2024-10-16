@@ -403,7 +403,7 @@ console.log(res);
 
   //how+do+i+participate%0Ain+the+learn+programming+for+free+*program*  
 }
- const formData =  FormData(this)
+ const formData =  new FormData(this)
  var str = `https://wa.me/2348030914844?text=*${this.id.replace('_','%20')}*%0A%0A`;
  formData.forEach((value, key) => {
      str += `${key.replace('_','%20')}+%20+:%20%20+${value}%0A`;
