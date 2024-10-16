@@ -380,6 +380,7 @@ var forms=document.getElementsByTagName('form');
 for(let i = 0; i < forms.length; i++){
 forms[i].onsubmit = async function(event){
 event.preventDefault();
+/*
 this.disabled = true;
 const send = await fetch(this.action,{
     method:"POST",
@@ -397,9 +398,15 @@ document.getElementById('error').innerHTML = err;
 }else{
    document.getElementById('error').innerHTML = `<div class="success-msg">${res.message}</div>`; 
 }
-
 console.log(res);
-}
+*/
 
-//
+  //how+do+i+participate%0Ain+the+learn+programming+for+free+*program*  
+}
+ const formData =  FormData(this)
+ var str = `https://wa.me/2348030914844?text=*${this.id.replace('_','%20')}*%0A%0A`;
+ formData.forEach((value, key) => {
+     str += `${key.replace('_','%20')}+%20+:%20%20+${value}%0A`;
+    });
+    window.location = str;
 };
