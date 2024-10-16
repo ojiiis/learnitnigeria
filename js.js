@@ -212,7 +212,7 @@ const courses = [
   },
   {
     "course_name": "JavaScript Programming",
-    "course_image": "https://your-image-hosting-service.com/javascript-programming.jpg",
+    "course_image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
     "course_description": "Learn JavaScript, the most popular language for web development, to add interactivity and functionality to web pages and applications.",
     "what_to_learn": [
       "JavaScript syntax and basic programming concepts",
