@@ -417,8 +417,8 @@ var started = false;
   var text = `<div id="testy">
                         <div id="testy-img" style="background-image:url(${testylist[ti].img});background-position:center;background-size:contain"></div>
                         <div id="testy-details">
-                            <div id="testy-name">${testylist[ti].name}</div>
-                            <div id="testy-testy">"${testylist[ti].msg}"</div>
+                           <div id="testy-testy">"${testylist[ti].msg}"</div>
+                           <div id="testy-name"><small>${testylist[ti].name}</small></div>
                         </div>
                     </div>`;
   document.getElementById("testimonies").innerHTML = text;
@@ -432,8 +432,8 @@ var started = false;
           var text = `<div id="testy">
                         <div id="testy-img" style="background-image:url(${testylist[ti].img});background-position:center;background-size:contain}"></div>
                         <div id="testy-details">
-                            <div id="testy-name">${randnames()}</div>
                             <div id="testy-testy">"${testylist[ti].msg}"</div>
+                            <div id="testy-name"><small>${testylist[ti].name}</small></div>
                         </div>
                     </div>`;
 
