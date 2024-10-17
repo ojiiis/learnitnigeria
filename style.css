@@ -346,6 +346,10 @@ top:50%;
       color: red;
       font-size: 13px;
   }
+
+#testy-details{
+width:70%
+      }
 @keyframes fromBottom {
     from {
         bottom: -250px;
