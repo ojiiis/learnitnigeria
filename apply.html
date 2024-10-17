@@ -100,6 +100,17 @@
                 a.style.animation = "fromBottom 1s forwards";
                 cIndex++;
             }, 10000);
+
+        var meta = document.getElementsByTagName("meta");
+        for(let i = 0; i < meta.length; i++){
+            if(meta[i].name = "description"){
+         meta[i].content  = `Apply for our comprehensive [Course Name] course and gain practical skills in [subject area]. Learn with hands-on training and expert support. Enroll today to start mastering [subject] and advance your tech career!`;
+            }
+
+            if(meta[i].property = "og:description"){
+         meta[i].content  = `Apply for our comprehensive [Course Name] course and gain practical skills in [subject area]. Learn with hands-on training and expert support. Enroll today to start mastering [subject] and advance your tech career!`;
+            }
+        }
     </script>
 </body>
 
