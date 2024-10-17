@@ -224,7 +224,7 @@ const courses = [
   },
   {
     "course_name": "C++ Programming",
-    "course_image": "https://your-image-hosting-service.com/cplusplus-programming.jpg",
+    "course_image": "asset/course/c++.png",
     "course_description": "Learn C++, a powerful and efficient programming language widely used in system/software development, game development, and competitive programming.",
     "what_to_learn": [
       "C++ syntax and programming basics",
@@ -236,7 +236,7 @@ const courses = [
   },
    {
     "course_name": "PHP Programming",
-    "course_image": "https://your-image-hosting-service.com/php-programming.jpg",
+    "course_image": "asset/course/php.png",
     "course_description": "Learn PHP, a popular server-side scripting language used for developing dynamic websites and web applications.",
     "what_to_learn": [
       "PHP syntax and basic programming concepts",
@@ -261,7 +261,7 @@ const courses = [
   },
   {
     "course_name": "Ruby on Rails Programming",
-    "course_image": "https://your-image-hosting-service.com/ruby-on-rails-programming.jpg",
+    "course_image": "asset/course/rail.png",
     "course_description": "Learn Ruby on Rails, a powerful and beginner-friendly framework for building modern, scalable web applications quickly.",
     "what_to_learn": [
       "Ruby programming language basics",
