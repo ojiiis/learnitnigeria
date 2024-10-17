@@ -396,12 +396,12 @@ console.log(res);
 };
 const testylist = [
  {
-  'img':'asset/image/t2.jpg',
+  'img':'asset/image/t2.jpeg',
   'name':'Nkechi Chukwudi',
   'msg':'Learn IT Nigeria has been instrumental in my journey to becoming a proficient programmer. Their expertise in Python and Javascript, along with their focus on web development, has truly set them apart. I highly recommend Learn IT Nigeria to anyone looking to enhance their IT skills.'
  },
   {
-  'img':'asset/image/t3.jpg',
+  'img':'asset/image/t3.jpeg',
   'name':'Chinonso Onyeka',
   'msg':'Learn IT Nigeria offers exceptional training in Python and Javascript, making learning web development a breeze. Their expertise in IT-related services is unparalleled. I highly recommend Learn IT Nigeria for anyone looking to advance their programming skills.'
  },
