@@ -248,7 +248,7 @@ const courses = [
   },
   {
     "course_name": "Node.js Programming",
-    "course_image": "https://your-image-hosting-service.com/nodejs-programming.jpg",
+    "course_image": "asset/course/nodejs.png",
     "course_description": "Learn Node.js, a powerful JavaScript runtime environment that allows you to build fast and scalable server-side applications.",
     "what_to_learn": [
       "Node.js basics and asynchronous programming",
@@ -408,8 +408,21 @@ const testylist = [
   'msg':'Hello world 3'
  }
 ];
+var started = false;
  var ti = 0;
+ if(!started){
+  var text = `<div id="testy">
+                        <div id="testy-img" style="${testylist[ti].img}"></div>
+                        <div id="testy-details">
+                            <div id="testy-name">${randnames()}</div>
+                            <div id="testy-testy">"${testylist[ti].msg}"</div>
+                        </div>
+                    </div>`;
+  document.getElementById("testimonies").innerHTML = text;
+ }
             setInterval(function () {
+              started = true;
+               ti++;
                 if (ti == testylist.length) {
                     ti = 0;
                 }
@@ -432,5 +445,5 @@ const testylist = [
                 a.innerHTML = text;
                 document.getElementById("testimonies").appendChild(a);
                 a.style.animation = "testin 1s forwards";
-                ti++;
+               
             }, 9000);
