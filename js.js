@@ -415,7 +415,7 @@ var started = false;
  var ti = 0;
  if(!started){
   var text = `<div id="testy">
-                        <div id="testy-img" style="background-image:url(${testylist[ti].img});background-position:center;background-size:cover"></div>
+                        <div id="testy-img" style="background-image:url(${testylist[ti].img});background-position:center;background-size:contain"></div>
                         <div id="testy-details">
                             <div id="testy-name">${testylist[ti].name}</div>
                             <div id="testy-testy">"${testylist[ti].msg}"</div>
@@ -430,7 +430,7 @@ var started = false;
                     ti = 0;
                 }
           var text = `<div id="testy">
-                        <div id="testy-img" style="background-image:url(${testylist[ti].img});background-position:center;background-size:cover}"></div>
+                        <div id="testy-img" style="background-image:url(${testylist[ti].img});background-position:center;background-size:contain}"></div>
                         <div id="testy-details">
                             <div id="testy-name">${randnames()}</div>
                             <div id="testy-testy">"${testylist[ti].msg}"</div>
