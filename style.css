@@ -346,7 +346,9 @@ top:50%;
       color: red;
       font-size: 13px;
   }
-
+#testimony{
+    overflow:hidden
+      }
 #testy-details{
 width:70%
       }
