@@ -102,7 +102,7 @@ const courses = [
   },
     {
     "course_name": "Backend Development",
-    "course_image": "asset/course/backend.jpg",
+    "course_image": "asset/course/backend.png",
     "course_description": "Master server-side development to create APIs, handle databases, and implement logic for web applications.",
     "what_to_learn": [
       "Server-side languages (Node.js, Python, PHP)",
@@ -114,7 +114,7 @@ const courses = [
   },
   {
     "course_name": "Data Science",
-    "course_image": "https://www.linkpicture.com/q/data-science.jpg",
+    "course_image": "asset/course/datascience.png",
     "course_description": "Master the skills to analyze data, create machine learning models, and use data visualization techniques to derive insights.",
     "what_to_learn": [
       "Python programming for data analysis",
@@ -126,7 +126,7 @@ const courses = [
   },
   {
     "course_name": "Cybersecurity",
-    "course_image": "https://www.linkpicture.com/q/cybersecurity.jpg",
+    "course_image": "asset/course/cybersecurity.png",
     "course_description": "Learn the essential techniques for securing systems, preventing cyber attacks, and ensuring the integrity of data.",
     "what_to_learn": [
       "Network security fundamentals",
@@ -138,7 +138,7 @@ const courses = [
   },
   {
     "course_name": "Cloud Computing",
-    "course_image": "https://www.linkpicture.com/q/cloud-computing.jpg",
+    "course_image": "asset/course/cloudcomputing.png",
     "course_description": "Gain expertise in managing and deploying applications and services in the cloud using platforms like AWS, Azure, and Google Cloud.",
     "what_to_learn": [
       "Cloud architecture and deployment",
@@ -150,7 +150,7 @@ const courses = [
   },
   {
     "course_name": "Mobile App Development",
-    "course_image": "https://www.linkpicture.com/q/mobile-app-development.jpg",
+    "course_image": "asset/course/mobileapp.png",
     "course_description": "Learn to build mobile apps for Android and iOS platforms using programming languages like Kotlin, Swift, and frameworks like Flutter.",
     "what_to_learn": [
       "Android development with Kotlin",
@@ -162,7 +162,7 @@ const courses = [
   },
   {
     "course_name": "Artificial Intelligence (AI)",
-    "course_image": "https://www.linkpicture.com/q/artificial-intelligence.jpg",
+    "course_image": "asset/course/ai.png",
     "course_description": "Explore the world of AI, machine learning, and deep learning to create intelligent systems capable of solving complex problems.",
     "what_to_learn": [
       "Introduction to AI and ML",
@@ -174,7 +174,7 @@ const courses = [
   },
    {
     "course_name": "Blockchain Development",
-    "course_image": "https://your-image-hosting-service.com/blockchain-development.jpg",
+    "course_image": "asset/course/bc.png",
     "course_description": "Learn how to build decentralized applications and smart contracts on blockchain platforms like Ethereum and Solana.",
     "what_to_learn": [
       "Blockchain fundamentals",
@@ -212,7 +212,7 @@ const courses = [
   },
   {
     "course_name": "JavaScript Programming",
-    "course_image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    "course_image": "asset/course/js.png",
     "course_description": "Learn JavaScript, the most popular language for web development, to add interactivity and functionality to web pages and applications.",
     "what_to_learn": [
       "JavaScript syntax and basic programming concepts",
@@ -360,22 +360,6 @@ const hideCourse =()=>{
 }
 
 
-var appliedList = [
-    {
-        name:"Aliu Jamiu",
-        pic:""
-    },
-     {
-        name:"Gbadamosi Joshua",
-        pic:""
-    },
-    {
-        name:"Gabrel Musa",
-        pic:""
-    }
-];
-
-
 var forms=document.getElementsByTagName('form');
 for(let i = 0; i < forms.length; i++){
 forms[i].onsubmit = async function(event){
@@ -410,3 +394,43 @@ console.log(res);
 }
 
 };
+const testylist = [
+ {
+  'img':'',
+  'msg':'Hello world 1'
+ },
+  {
+  'img':'',
+  'msg':'Hello world 2'
+ },
+  {
+  'img':'',
+  'msg':'Hello world 3'
+ }
+];
+ var ti = 0;
+            setInterval(function () {
+                if (ti == testylist.length) {
+                    ti = 0;
+                }
+          var text = `<div id="testy">
+                        <div id="testy-img" style="${testylist[ti].img}"></div>
+                        <div id="testy-details">
+                            <div id="testy-name">${randnames()}</div>
+                            <div id="testy-testy">"${testylist[ti].msg}"</div>
+                        </div>
+                    </div>`;
+
+                if (document.getElementById("testy")) {
+                    document.getElementById("testy").style.animation = "testyout 1s forwards"
+                    setTimeout(function () {
+                        document.getElementById("testy").remove();
+                    }, 50)
+                }
+                let a = document.createElement('div');
+                //a.id = "applied-alert";
+                a.innerHTML = text;
+                document.getElementById("testimonies").appendChild(a);
+                a.style.animation = "testin 1s forwards";
+                ti++;
+            }, 9000);
