@@ -104,28 +104,6 @@
           
     </div>
 <script src="js.js?i=1"></script>
-<script>
-    typeAni(document.getElementById("name"),{
-        delay: 800,
-        cursorColor:'black',cspeed:100},20)
-    typeAni(document.getElementById("hinfo"), {
-            delay: 900,
-            cursorColor: 'white',cspeed:20
-        
-        },20)
-    typeAni(document.getElementById("linbot"), {
-            delay: 850,
-            cursorColor: 'black',cspeed:50
-        },13);
-        
-        var cs = "";
-        courses.forEach((element,i) => {
-         cs += `<a href="javascript:void(0)" class="course" onclick="showCourse(${i})">
-                       <div class="course-image" style="background-image:url(${element.course_image})"></div>
-                           <h4>${element.course_name}</h4>
-                    </a>`;   
-        });
-        document.getElementById('course-lister').innerHTML = cs;
-</script>
+<script src="index.js"></script>
 </body>
 </html>
