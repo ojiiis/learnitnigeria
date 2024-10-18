@@ -150,7 +150,7 @@ z-index: 999999;
 #testy{
     width: 90%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     animation: testyin 1s forwards;
 }
 @keyframes testyin {
@@ -178,12 +178,39 @@ margin-left: 0%
     background: green;
     margin-right: 10px;
     flex-shrink: 0;
+    background-position: center;
+    background-size: cover;
+    border:3px solid #ddd;
+    z-index: 100;
 }
 
 #testy-name{
     font-size: 15px;
+   
 }
 
+#testimony {
+    overflow: hidden;
+}
+
+#testy-details {
+    width: 60%;
+    background: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+#testy-details::before{
+    content: "";
+    width: 6%;
+    height: 30px;
+    display: block;
+    position: absolute;
+    bottom:10%;
+    left:-6%;
+    background: #ddd;
+    z-index: 99;
+}
 .input-group{
     padding:10px 20px;
 }
@@ -346,12 +373,7 @@ top:50%;
       color: red;
       font-size: 13px;
   }
-#testimony{
-    overflow:hidden
-      }
-#testy-details{
-width:70%
-      }
+
 @keyframes fromBottom {
     from {
         bottom: -250px;
