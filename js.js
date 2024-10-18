@@ -300,14 +300,14 @@ const typeAni = (elem,set ={},ch) =>{
     }
     
 
-    var run = setInterval(typing,50);
+    var run = setInterval(typing,set.cspeed);
     var cursorOn = false;
     var main = setInterval(function(){
         if(cursorOn == false){
             clearInterval(run);
             cursorOn = true;
         }else{
-           run = setInterval(typing,200);
+           run = setInterval(typing,set.cspeed);
            cursorOn = false;
         }
     },set.delay);
