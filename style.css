@@ -127,7 +127,9 @@ z-index: 999999;
     background-size:contain;
     background-repeat: no-repeat;
 }
-
+.course-image:hover {
+background-size:cover;
+}
 #whatsapp{
     display:inline-block;
     text-decoration:none;
@@ -203,15 +205,14 @@ margin-left: 0%
 #testy-details::before{
     content: "";
     width: 0;
-            height: 0;
-            border-top: 6% solid transparent;
-            border-bottom: 6%  solid transparent;
-            border-right: 30px solid #ddd;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 20px solid #ddd;
     display: block;
     position: absolute;
     bottom:10%;
     left:-6%;
-    background: #ddd;
     z-index: 99;
 }
 .input-group{
