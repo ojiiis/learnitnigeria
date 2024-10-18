@@ -75,11 +75,9 @@
         var course = (get('course')) ? get('course') : 'Learn It Nigeria';
         document.getElementById("course").innerText = course;
         document.getElementById("applied_for").value = course;
-        var cIndex = 0;
+
             setInterval(function () {
-                if (cIndex == appliedList.length) {
-                    cIndex = 0;
-                }
+              
                 var course = (get('course')) ? get('course') : 'Learn It Nigeria';
                 var text = `<div id="applied-img" style="background-image:url('asset/image/user.webp')"></div>
          <div id="applied-details">
@@ -98,22 +96,17 @@
                 a.innerHTML = text;
                 document.body.appendChild(a);
                 a.style.animation = "fromBottom 1s forwards";
-                cIndex++;
+              
             }, 10000);
-
+        console.log(courses[get('id')])
         var meta = document.getElementsByTagName("meta");
         for(let i = 0; i < meta.length; i++){
-            if(meta[i].name = "description"){
-         meta[i].content  = `Apply for our comprehensive ${get('course')}
-         course and gain practical skills in 
-         [subject area]. Learn with hands-on training and expert support. Enroll today to start mastering
-         [subject] and advance your tech career!`;
+            if(meta[i].getAttribute("name") == "description"){
+         meta[i].setAttribute("content", `Apply for our comprehensive ${get('course')} course and gain practical skills in ${courses[get('id')].what_to_learn.join(", ")}. Learn with hands-on training and expert support. Enroll today to start mastering ${get('course')} and advance your tech career!`);
             }
 
-            if(meta[i].property = "og:description"){
-         meta[i].content  = `Apply for our comprehensive ${get('course')} course and gain practical skills in
-         [subject area]. Learn with hands-on training and expert support. Enroll today to start mastering
-         [subject] and advance your tech career!`;
+            if(meta[i].getAttribute("property") == "og:description"){
+         meta[i].setAttribute("content", `Apply for our comprehensive ${get('course')} course and gain practical skills in ${courses[get('id')].what_to_learn.join(", ")}. Learn with hands-on training and expert support. Enroll today to start mastering ${get('course')} and advance your tech career!`);
             }
         }
     </script>
