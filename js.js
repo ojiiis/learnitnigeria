@@ -7,71 +7,71 @@ return paramValue;
 
 
 const female = [
-    "Abiola",          // Born in wealth
-    "Ayomide",         // My joy has come
-    "Bola",            // To be wealthy
-    "Folake",          // To be pampered with wealth
-    "Toluwa",          // To God be the glory
-    "Olamide",         // My wealth has come
-    "Funke",           // To take care of or to pamper
-    "Adaeze",          // Daughter of a king
-    "Chiamaka",        // God is beautiful
-    "Uchechi",         // God's will
-    "Ifeyinwa",       // Nothing is impossible
-    "Ngozi",           // Blessing
-    "Ifeoma",         // Good thing
-    "Chinonso",       // God is near
-    "Amina",           // Trustworthy
-    "Fatima",          // Captivating
-    "Zainab",          // Father's precious jewel
-    "Sadiya",          // Lucky
-    "Maryam",          // Beloved
-    "Halima",          // Gentle or mild
-    "Rukayya",         // A name of a wife of the Prophet Muhammad
-    "Yetunde",         // Mother has returned (after rebirth)
-    "Olufunke",        // God has given me a caring person
-    "Damilola",        // God has given me wealth
-    "Chinwendu",       // God’s spirit is with me
-    "Efe",             // Wealth or prosperity
-    "Nkechi",          // What God has given
-    "Temitope",        // Mine is gratitude
-    "Jumoke",          // One who is pampered
-    "Opeoluwa",        // God's blessing
-    "Fiyinfoluwa",     // Help me to appreciate God
-    "Toyin",           // To be joyful
-    "Temiloluwa"       // My wealth belongs to God
+    "Abiola",          
+    "Ayomide",         
+    "Bola",            
+    "Folake",          
+    "Toluwa",         
+    "Olamide",         
+    "Funke",           
+    "Adaeze",         
+    "Chiamaka",        
+    "Uchechi",        
+    "Ifeyinwa",       
+    "Ngozi",           
+    "Ifeoma",         
+    "Chinonso",       
+    "Amina",           
+    "Fatima",          
+    "Zainab",          
+    "Sadiya",          
+    "Maryam",          
+    "Halima",         
+    "Rukayya",        
+    "Yetunde",         
+    "Olufunke",        
+    "Damilola",        
+    "Chinwendu",       
+    "Efe",             
+    "Nkechi",          
+    "Temitope",        
+    "Jumoke",       
+    "Opeoluwa",       
+    "Fiyinfoluwa",     
+    "Toyin",           
+    "Temiloluwa"       
 ];
 
 const male = [
-    "Adeola",          // Crown of wealth
-    "Chijioke",        // God gives talent
-    "Emeka",           // Great deeds
-    "Ifeanyi",         // Nothing is impossible with God
-    "Obinna",          // Father's heart
-    "Nnamdi",          // My father is alive
-    "Tunde",           // Returns again
-    "Oluwaseun",       // God has done well
-    "Chukwudi",        // God is alive
-    "Ugochukwu",       // God's glory
-    "Ayodele",         // Joy has come home
-    "Ikenna",          // The power of the father
-    "Oghenekevwe",     // The world knows
-    "Damilare",        // God has redeemed me
-    "Chinonso",        // God is near
-    "Ifechukwu",       // God's light
-    "Kelechi",         // Thank God
-    "Uchechukwu",      // God's will
-    "Obi",             // Heart
-    "Nedum",           // The good one
-    "Onyeka",          // Who is greater than God?
-    "Temitope",        // Mine is gratitude
-    "Okechukwu",       // God's strength
-    "Chima",           // God knows
-    "Chukwuemeka",     // God has done well
-    "Emmanuel",        // God is with us
-    "Tope",            // To God be the glory
-    "Olumide",         // My wealth has come
-    "Ayomide"          // My joy has come
+    "Adeola",          
+    "Chijioke",        
+    "Emeka",          
+    "Ifeanyi",         
+    "Obinna",         
+    "Nnamdi",         
+    "Tunde",           
+    "Oluwaseun",       
+    "Chukwudi",        
+    "Ugochukwu",       
+    "Ayodele",         
+    "Ikenna",          
+    "Oghenekevwe",    
+    "Damilare",       
+    "Chinonso",        
+    "Ifechukwu",       
+    "Kelechi",         
+    "Uchechukwu",      
+    "Obi",             
+    "Nedum",           
+    "Onyeka",          
+    "Temitope",        
+    "Okechukwu",       
+    "Chima",          
+    "Chukwuemeka",     
+    "Emmanuel",        
+    "Tope",           
+    "Olumide",         
+    "Ayomide"          
 ];
 
 
@@ -318,7 +318,6 @@ const typeAni = (elem,set ={},ch) =>{
     let cursor = document.createElement("div");
     cursor.style.display = "inline-block";
     cursor.style.width = "2px";
-    //cursor.style.height= (elem.offsetHeight*0.30)+"px";
    cursor.style.height= ch+"px";
 
      cursor.style.background = set.cursorColor;
@@ -348,7 +347,7 @@ mc += `<li>${item}</li>`;
         }); 
                        
       mc +=  `</ul>
-                        <a class="btn" style="width:150px" href="apply.html?course=${courses[x].course_name}">Apply now</a>
+                        <a class="btn" style="width:150px" href="apply.html?course=${courses[x].course_name}&id=${x}">Apply now</a>
                         
         `;
     document.getElementById("modal-content").innerHTML =  mc;
@@ -364,89 +363,15 @@ var forms=document.getElementsByTagName('form');
 for(let i = 0; i < forms.length; i++){
 forms[i].onsubmit = async function(event){
 event.preventDefault();
-/*
-this.disabled = true;
-const send = await fetch(this.action,{
-    method:"POST",
-    body: new FormData(this)
-});
-const res = await send.json();
-this.disabled = false;
-document.getElementById('error').scrollIntoView({ behavior: "smooth" });
-if(!res.status){
-    var err = "";
-res.error.forEach((item)=>{
-err += `<div class="error-msg">${item}</div>`;
-});
-document.getElementById('error').innerHTML = err;
-}else{
-   document.getElementById('error').innerHTML = `<div class="success-msg">${res.message}</div>`; 
-}
-console.log(res);
-*/
+
  const formData =  new FormData(this)
  var str = `https://wa.me/2348030914844?text=*${this.id.replace('_','%20')}*%0A%0A`;
  formData.forEach((value, key) => {
      str += `${key.replace('_','%20')}+%20+:%20%20+${value}%0A`;
     });
     window.location = str;
-  //how+do+i+participate%0Ain+the+learn+programming+for+free+*program*  
+
 }
 
 };
-const testylist = [
- {
-  'img':'asset/image/t2.jpeg',
-  'name':'Nkechi Chukwudi',
-  'msg':'Learn IT Nigeria has been instrumental in my journey to becoming a proficient programmer. Their expertise in Python and Javascript, along with their focus on web development, has truly set them apart. I highly recommend Learn IT Nigeria to anyone looking to enhance their IT skills.'
- },
-  {
-  'img':'asset/image/t3.jpeg',
-  'name':'Chinonso Onyeka',
-  'msg':'Learn IT Nigeria offers exceptional training in Python and Javascript, making learning web development a breeze. Their expertise in IT-related services is unparalleled. I highly recommend Learn IT Nigeria for anyone looking to advance their programming skills.'
- },
-  {
-  'img':'asset/image/t1.jpg',
-  'name':'Bola Oluwaseun',
-  'msg':'I am extremely satisfied with the services provided by Learn IT Nigeria. Their expertise in Python and Javascript made learning web development a breeze. Their team is dedicated to ensuring their students\' success.'
- }
-];
-var started = false;
- var ti = 0;
- if(!started){
-  var text = `<div id="testy">
-                        <div id="testy-img" style="background-image:url(${testylist[ti].img});background-position:center;background-size:contain"></div>
-                        <div id="testy-details">
-                           <div id="testy-testy">"${testylist[ti].msg}"</div>
-                           <div id="testy-name"><small>${testylist[ti].name}</small></div>
-                        </div>
-                    </div>`;
-  document.getElementById("testimonies").innerHTML = text;
- }
-            setInterval(function () {
-              started = true;
-               ti++;
-                if (ti == testylist.length) {
-                    ti = 0;
-                }
-          var text = `<div id="testy">
-                        <div id="testy-img" style="background-image:url(${testylist[ti].img});background-position:center;background-size:contain}"></div>
-                        <div id="testy-details">
-                            <div id="testy-testy">"${testylist[ti].msg}"</div>
-                            <div id="testy-name"><small>${testylist[ti].name}</small></div>
-                        </div>
-                    </div>`;
 
-                if (document.getElementById("testy")) {
-                    document.getElementById("testy").style.animation = "testyout 1s forwards"
-                    setTimeout(function () {
-                        document.getElementById("testy").remove();
-                    }, 50)
-                }
-                let a = document.createElement('div');
-                //a.id = "applied-alert";
-                a.innerHTML = text;
-                document.getElementById("testimonies").appendChild(a);
-                a.style.animation = "testin 1s forwards";
-               
-            }, 9000);
